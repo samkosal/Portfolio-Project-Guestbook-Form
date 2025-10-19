@@ -1,0 +1,91 @@
+form {
+  border-radius: 0.5rem;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto 1rem auto;
+  padding: 0 1rem 2rem 1rem;
+  font-weight: bold;
+}
+h1 {
+    text-align: center;
+}
+
+/* fieldset spacing */
+fieldset {
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+}
+#entry6 {
+    display: grid;
+    grid-template-areas:
+    "first second third"
+    "fourth fifth sixth";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#entry2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+textarea {
+    min-height: 120px;
+}
+
+/* field input, select, textarea */
+
+fieldset input, fieldset select, textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+/* first 6 entry box */
+#first {
+    grid-area: first;
+}
+#second {
+    grid-area: second;
+}
+#third {
+    grid-area: third;
+}
+#fourth {
+    grid-area: fourth;
+}
+#fifth {
+    grid-area: fifth;
+}
+#sixth {
+    grid-area: sixth;
+}
+
+/* checkbox and radio button */
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* submit */
+button {
+  width: 15%;
+  padding: 0.75rem;
+  background-color: #3cff00;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+/* Responsive design */
+/* @media (max-width: 768px) {
+  fieldset {
+    display: grid;
+  grid-template-areas:
+    "first second"
+    "third fourth"
+    "fifth sixth";
+    grid-template-columns: 1fr 1fr;
+  }
+} */

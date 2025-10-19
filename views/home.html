@@ -3,12 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ice Cream Order Form</title>
+    <title>Guestbook</title>
+    <!-- script  -->
     <script src = "js/guestbook.js" defer></script>
-    <!-- <link rel="icon" href="images/icecream.png" /> -->
+    <!-- favicon -->
+    <link rel="icon" href="images/tf2Pizza.jpg" />
+    <!-- link styling -->
     <link rel="stylesheet" href="styles/stylesheet.css" />
 </head>
 <body>
-    <h1>Hi</h1>
+    <main>
+        <form>
+            <!-- Contact form -->
+            <h1>Contact Form</h1>
+            <!-- first 6 entry box -->
+            <fieldset id = "entry6">
+                <div id = "first">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="name">
+                </div>
+                <div id = "second">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div id = "third">
+                    <label for="jobname">Job Title:</label>
+                    <input type="text" id="jobname" name="jobname">
+                </div>
+                <div id = "fourth">
+                    <label for="companyname">Company Name:</label>
+                    <input type="text" id="companyname" name="companyname">
+                </div>
+                <div id = "fifth">
+                    <label for="linkedin">Linkedin URL:</label>
+                    <input type="text" id="linkedin" name="linkedin">
+                </div>
+                <div id = "sixth">
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+
+            </fieldset>
+            <!-- 2 entry -->
+            <fieldset id = "entry2">
+                <div>
+                    <label>How did we meet?</label>
+                    <select id="size" name="size">
+                        <option value="event">Networking event</option>
+                        <option value="online">Online</option>
+                        <option value="in-person">in-person</option>
+                        <option value="school">school</option>
+                    </select>
+                </div>
+                <div id = "other">
+                    <label for="other">Other (please specify)</label>
+                    <input type="text" id="other" name="other">
+                </div>
+            </fieldset>
+            <!-- message box -->
+            <fieldset id = "message">
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+            </fieldset>
+            <!-- checkbox, radio button-->
+            <section>
+                
+                <label for="mail">
+                    <input type="checkbox" id="mail" name="mailing[]"
+                        value="mail">Please add me to your mailing list
+                </label>
+                <br>
+                <label> Choose an email format:
+                    <label for="HTML">
+                        <input type="radio" id="HTML" name="method"
+                            value="HTML">HTML
+                    </label>
+                
+                    <label for="Text">
+                        <input type="radio" id="Text" name="method"
+                            value="Text">Text
+                    </label>
+                </label>
+                
+            </section>
+            <!-- submit -->
+            <button type="submit" id="order-button">submit</button>
+        </form>
+
+    </main>
 </body>
 </html>
