@@ -13,32 +13,38 @@
 </head>
 <body>
     <main>
-        <form>
+        <form id="guestbook-form" action="submit-order" method="post">
             <!-- Contact form -->
             <h1>Contact Form</h1>
             <!-- first 6 entry box -->
             <fieldset id = "entry6">
                 <div id = "first">
+                    <span id="err-fname" class="error"> First Name cannot be empty!</span>
                     <label for="fname">First Name:</label>
                     <input type="text" id="fname" name="name">
                 </div>
                 <div id = "second">
+                    <span id="err-lname" class="error"> First Name cannot be empty!</span>
                     <label for="lname">Last Name:</label>
                     <input type="text" id="lname" name="lname">
                 </div>
                 <div id = "third">
+                    <span id="err-jobname" class="error"> First Name cannot be empty!</span>
                     <label for="jobname">Job Title:</label>
                     <input type="text" id="jobname" name="jobname">
                 </div>
                 <div id = "fourth">
+                    <span id="err-companyname" class="error"> First Name cannot be empty!</span>
                     <label for="companyname">Company Name:</label>
                     <input type="text" id="companyname" name="companyname">
                 </div>
                 <div id = "fifth">
+                    <span id="err-linkedin" class="error"> First Name cannot be empty!</span>
                     <label for="linkedin">Linkedin URL:</label>
                     <input type="text" id="linkedin" name="linkedin">
                 </div>
                 <div id = "sixth">
+                    <span id="err-email" class="error"> First Name cannot be empty!</span>
                     <label for="email">Email Address:</label>
                     <input type="text" id="email" name="email">
                 </div>
@@ -47,15 +53,18 @@
             <!-- 2 entry -->
             <fieldset id = "entry2">
                 <div>
+                    <span id="err-meet" class="error">Please select a size</span>
                     <label>How did we meet?</label>
-                    <select id="size" name="size">
+                    <select id="meet" name="meet">
+                        <option value="none">-- Select an option --</option>
                         <option value="event">Networking event</option>
                         <option value="online">Online</option>
                         <option value="in-person">in-person</option>
                         <option value="school">school</option>
+                        <option value="other">other</option>
                     </select>
                 </div>
-                <div id = "other">
+                <div id = "other-input">
                     <label for="other">Other (please specify)</label>
                     <input type="text" id="other" name="other">
                 </div>
@@ -75,7 +84,7 @@
                         value="mail">Please add me to your mailing list
                 </label>
                 <br>
-                <label> Choose an email format:
+                <label id = "pick-email-format"> Choose an email format:
                     <label for="HTML">
                         <input type="radio" id="HTML" name="method"
                             value="HTML">HTML

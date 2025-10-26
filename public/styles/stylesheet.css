@@ -78,14 +78,15 @@ button {
   margin-top: 1rem;
 }
 
-/* Responsive design */
-/* @media (max-width: 768px) {
-  fieldset {
-    display: grid;
-  grid-template-areas:
-    "first second"
-    "third fourth"
-    "fifth sixth";
-    grid-template-columns: 1fr 1fr;
-  }
-} */
+/* error message */
+.error {
+  color: darkred;
+  display: none;
+}
+
+#other-input {
+  display: none;
+}
+#pick-email-format {
+  display: none;
+}
