@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <!-- script  -->
+    <script src = "js/guestbook.js" defer></script>
+    <!-- favicon -->
+    <link rel="icon" href="images/tf2Pizza.jpg" />
+    <!-- link styling -->
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+</head>
+<body>
+    <main>
+        <h1>Admin</h1>
+        <table id="order-table" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>jobname</th>
+                    <th>companyname</th>
+                    <th>linkedin</th>
+                    <th>email</th>
+                    <th>meet</th>
+                    <th>message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orders.forEach(order => { %>
+
+                <tr>
+                    <td><%= order.fname %> <%= order.lname %></td>
+                    <td><%= order.jobname %></td>
+                    <td><%= order.companyname %></td>
+                    <td><%= order.linkedin %></td>
+                    <td><%= order.email %></td>
+                    <td><%= order.meet %></td>
+                    <td><%= order.message %></td>
+                </tr>
+
+                <% }); %>
+
+            </tbody>
+        </table>
+        <a href="/">submit a form</a>
+        <a href="/admin">go to admin</a>
+
+    </main>
+</body>
+</html>
