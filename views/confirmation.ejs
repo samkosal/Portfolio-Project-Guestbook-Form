@@ -10,12 +10,22 @@
     <link rel="icon" href="images/tf2Pizza.jpg" />
     <!-- link styling -->
     <!-- <link rel="stylesheet" href="styles/stylesheet.css" /> -->
+    <link rel="stylesheet" href="styles/partials.css">
 </head>
 <body>
+    <%- include('partials/sidebar') %>
     <main>
         <h1>Confirmation</h1>
-        <button><a href="/">submit a form</a></button>
-        <button><a href="/admin">go to admin</a></button>
+        <h1>Thank you for your order, <%= order.fname %>!</h1>
+        <h2>Order Summary</h2>
+        <p>Name: <%= order.fname %> <%= order.lname %></p>
+        <p>Title: <%= order.jobname %></p>
+        <p>Company Name: <%= order.companyname %></p>
+        <p>Linkedin: <%= order.linkedin %></p>
+        <p>Email: <%= order.email %></p>
+        <p>Meet: <%= order.meet %></p>
+        <p>Message: <%= order.message %></p>
+        <p>Date/Time: <%= order.timestamp.toLocaleString() %></p>
 
     </main>
 </body>

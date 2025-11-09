@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guestbook</title>
-    <!-- script  -->
-    <script src = "js/guestbook.js" defer></script>
-    <!-- favicon -->
-    <link rel="icon" href="images/tf2Pizza.jpg" />
-    <!-- link styling -->
-    <link rel="stylesheet" href="styles/stylesheet.css" />
-</head>
-<body>
-    <main>
-        <form id="guestbook-form" action="submit-order" method="post">
-            <!-- Contact form -->
-            <h1>Contact Form</h1>
-            <!-- first 6 entry box -->
-            <fieldset id = "entry6">
-                <div id = "first">
-                    <span id="err-fname" class="error"> First Name cannot be empty!</span>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname">
-                </div>
-                <div id = "second">
-                    <span id="err-lname" class="error"> Last Name cannot be empty!</span>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname">
-                </div>
-                <div id = "third">
-                    <span id="err-jobname" class="error"> Job Title cannot be empty!</span>
-                    <label for="jobname">Job Title:</label>
-                    <input type="text" id="jobname" name="jobname">
-                </div>
-                <div id = "fourth">
-                    <span id="err-companyname" class="error"> Company Name cannot be empty!</span>
-                    <label for="companyname">Company Name:</label>
-                    <input type="text" id="companyname" name="companyname">
-                </div>
-                <div id = "fifth">
-                    <span id="err-linkedin" class="error"> Linkedin URL cannot be empty!</span>
-                    <label for="linkedin">Linkedin URL:</label>
-                    <input type="text" id="linkedin" name="linkedin">
-                </div>
-                <div id = "sixth">
-                    <span id="err-email" class="error"> Email Address cannot be empty!</span>
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" name="email">
-                </div>
-
-            </fieldset>
-            <!-- 2 entry -->
-            <fieldset id = "entry2">
-                <div>
-                    <span id="err-meet" class="error">Please select an option</span>
-                    <label>How did we meet?</label>
-                    <select id="meet" name="meet">
-                        <option value="none">-- Select an option --</option>
-                        <option value="event">Networking event</option>
-                        <option value="online">Online</option>
-                        <option value="in-person">in-person</option>
-                        <option value="school">school</option>
-                        <option value="other">other</option>
-                    </select>
-                </div>
-                <div id = "other-input">
-                    <label for="other">Other (please specify)</label>
-                    <input type="text" id="other" name="other">
-                </div>
-            </fieldset>
-            <!-- message box -->
-            <fieldset id = "message">
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-            </fieldset>
-            <!-- checkbox, radio button-->
-            <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Portfolio</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="styles/partials.css">
+        <link rel="stylesheet" href="styles/home.css">
+        <!-- favicon -->
+        <link rel= "icon" href="images/maxresdefault.jpg">
+    </head>
+    <body>
+        <%- include('partials/sidebar') %>
+        <main>
+            <!-- Internship format -->
+            <!-- Header -->
+            <section id = "Header">
+                <!-- <img src="images/20250926_224810.jpg" alt="hi" width="200" height="150"> -->
+                <!-- <h1 id = "Name">Serey Makara, Kosal</h1> -->
                 
-                <label for="mail">
-                    <input type="checkbox" id="mail" name="mailing[]"
-                        value="mail">Please add me to your mailing list
-                </label>
-                <br>
-                <label id = "pick-email-format"> Choose an email format:
-                    <label for="HTML">
-                        <input type="radio" id="HTML" name="method"
-                            value="HTML">HTML
-                    </label>
-                
-                    <label for="Text">
-                        <input type="radio" id="Text" name="method"
-                            value="Text">Text
-                    </label>
-                </label>
-                
+                <header id = "header">
+                    <img src="images/20250926_224810.jpg" alt="hi" width="200" height="150">
+                    <div>
+                        <h1 id = "Name">Serey Makara, Kosal</h1>
+                        <p>Kosal.Serey@student.greenriver.edu</p>
+                        <p>(253) 833-9111</p>
+                    </div>
+                    
+                    <!-- <h1>FirstName LastName</h1> -->
+                    <div id = "divRight">
+                        <p><a id = "linkedin" role="button" href="https://www.linkedin.com/in/serey-makara-kosal-ab5569300" target="_blank"><button class="my-button"> LinkedIn</button></a></p>
+                        <p><a id = "github" role="button" href="https://github.com/samkosal" target="_blank"><button class="my-button">github</button></a></p>
+                    </div>
+                </header>   
             </section>
-            <!-- submit -->
-            <button type="submit" id="order-button">submit</button>
-            <p>
-                <a href="https://github.com/samkosal/Portfolio-Project-Guestbook-Form.git" target="_blank">
-                    https://github.com/samkosal/Portfolio-Project-Guestbook-Form.git
-                </a>
-            </p>
-        </form>
+            <hr>
+            <!-- Summary -->
+            <section>
+                <h2 class = "SectionTitle">Profile Summary</h2>
+                <p id = "summary"> Graduated with an Associate in Arts Degree from Green River College.
+                    Now enrolled in a computer science bachelor's degree that 
+                    specializes in Software Development as a Junior. Currently 
+                    contracted by a local tutoring center, Kumon North America. Inc,
+                    to create a student check-in system. Passionate about staying ahead
+                    in the fast-evolving tech landscape by continuously exploring new
+                    tools, frameworks, and programming paradigms. </p>
+            </section>
+            <hr>
+            <!-- EDUCATION -->
+            <section id = "education">
+                <h2 class = "SectionTitle"> Education</h2>
+                <div>
+                    <div id = "School">
+                        <p>Green River College – Auburn, WA</p>
+                        <p class = "pRight">2025 to Present</p>
+                    </div>
+                    <p><span class = "italics">Bachelor of Applied Science</span>, expected June 2027</p>
+                    <p>Major: Software Development (Applied Computer Science), GPA: 3.54 </p>
+                    <p><strong>Relevant Coursework:</strong> </p>
+                    <div id = "EduList">
+                        <ul>
+                            <li>Object-Oriented Programming</li>
+                            <li>Data Structures</li>
+                            <li>Full Stack Web Development</li>
+                        </ul>
 
-    </main>
-</body>
+                        <ul>
+                            <li>Database Fundamentals </li>
+                            <li>Backend Python Flask</li>
+                            <li>Database Python Xlwings</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <hr>
+            <!-- TECHNICAL SKILLS -->
+            <section id = "Skill">
+                <h2 class = "SectionTitle"> Skills and Certification </h2>
+                <div>
+                    <ul>
+                        <li>Languages: Java, SQL, JavaScript, Python </li>
+                        <li>Web: HTML/CSS, jQuery, JSON</li>
+                        <li>Tools: Git, VScode</li>
+                    </ul>
+                </div>
+            </section>
+            <hr>
+            <!-- EXPERIENCE -->
+            <section id = "Experience">
+                <h2 class = "SectionTitle"> Experience</h2>
+                <div>
+                    <div id = "CompanyName">
+                        <p><strong>Kumon North America, Inc.</strong> – WA</p>
+                        <p class = "pRight">2025 to Present</p>
+                    </div>
+                    <p> Full-Stack Developer: </p>
+                    <div>
+                        <ul>
+                            <li>Create/Maintain a student check-in system which helps keep track of
+                            students walking in and out using a Qr-Code phone scanner</li>
+                            <li>Completely eliminate the struggle of keeping track of student time</li>
+                            <li>Frontend: HTML, CSS, JavaScript</li>
+                            <li>Backend: Python Flask, Excel (Database)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

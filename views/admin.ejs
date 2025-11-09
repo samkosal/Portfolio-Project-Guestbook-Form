@@ -6,12 +6,17 @@
     <title>Guestbook</title>
     <!-- script  -->
     <script src = "js/guestbook.js" defer></script>
+    <script src="//code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
     <!-- favicon -->
     <link rel="icon" href="images/tf2Pizza.jpg" />
     <!-- link styling -->
     <!-- <link rel="stylesheet" href="styles/stylesheet.css" /> -->
+     <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="styles/partials.css">
 </head>
 <body>
+    <%- include('partials/sidebar') %>
     <main>
         <h1>Admin</h1>
         <table id="order-table" class="display">
@@ -24,6 +29,7 @@
                     <th>email</th>
                     <th>meet</th>
                     <th>message</th>
+                    <th>Time</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,14 +43,18 @@
                     <td><%= order.email %></td>
                     <td><%= order.meet %></td>
                     <td><%= order.message %></td>
+                    <td><%= order.timestamp.toLocaleString() %></td>
                 </tr>
 
                 <% }); %>
 
             </tbody>
         </table>
-        <button><a href="/">submit a form</a></button>
-        <button><a href="/admin">go to admin</a></button>
+        <!-- <button><a href="/">submit a form</a></button>
+        <button><a href="/admin">go to admin</a></button> -->
     </main>
+    <script defer>
+        let table = new DataTable('#order-table');
+    </script>
 </body>
 </html>

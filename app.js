@@ -36,7 +36,7 @@ app.get('/admin', (req, res) => {
 
 app.get('/contact-us', (req, res) => {
     res.render('contact');
-});
+});  
 
 app.post('/submit-order', (req, res) => {
 

@@ -1,0 +1,140 @@
+/* general body */
+:root {
+    --primary-color: #8cc9f1; /* body */
+    --secondary-color: rgb(191, 230, 243); /* main */
+}
+body {
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+main {
+    background-color:var(--secondary-color);
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.pRight {
+    text-align: right;
+    letter-spacing: 2px;
+}
+.italics {
+    font-style: italic;
+}
+.SectionTitle {
+    font-size: larger
+}
+.my-button {
+    background-color: lightblue;
+    border-radius: 3px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 8px;
+
+}
+hr {
+    border-color: black;
+}
+
+.my-button:hover {
+    background-color: #6db6eb;
+}
+
+.my-button:focus {
+    outline: 2px solid yellow; 
+    background-color: lightyellow; 
+}
+ul {
+    list-style-type: circle;
+}
+
+
+
+/* Header section */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+#Name {
+    text-align: center;
+    margin: 0px;
+}
+#header #divRight {
+    text-align: right;
+}
+img {
+    display: block;
+    margin: 0;
+    
+    border: 5px solid #6db6eb;
+    border-radius: 20px;
+    box-shadow: 10px black;
+    padding: 10px;
+    background-color: lightblue;
+    align-items: center;
+}
+
+/* Summary Section */
+#summary {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Techinical Skills */
+#Skill div {
+    display: flex;
+    gap: 50%;
+    
+}
+
+#Skill h2 {
+    margin: 0px;
+}
+
+/* Education */
+#School {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+#education p {
+    margin: 0;
+}
+#EduList {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* experience */
+#CompanyName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Experience p {
+    margin: 0px;
+}
+
+@media (max-width: 768px) {
+    /* #summary {
+        font-size: 15px;
+    } */
+    main, body, #summary {
+        font-size: 80%;
+    }
+    img, .my-button {
+        transform: scale(0.8);
+    }
+}
+
+
+
+
