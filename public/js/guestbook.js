@@ -26,11 +26,18 @@ document.getElementById('guestbook-form').onsubmit = () => {
     }
     // validate email checkbox
     let emailCheckbox = document.getElementById('mail');
+    let emailFormat = document.querySelector('input[name="method"]:checked');
     if (emailCheckbox.checked) {
         
         // Checkbox is checked, then check for email input
         if (!email || (email.indexOf("@") === -1 || email.indexOf(".") === -1)) {
             document.getElementById("err-email").style.display = "block";
+            isValid = false;
+        }
+        
+        //check if email format is selected after checkbox
+        if (!emailFormat) {
+            document.getElementById("err-pick-email-format").style.display = "block";
             isValid = false;
         }
     }
@@ -41,11 +48,12 @@ document.getElementById('guestbook-form').onsubmit = () => {
         isValid = false;
     }
     // Validate "how we met"
-    let size = document.getElementById('meet').value;
-    if (size === "none") {
+    let meet = document.getElementById('meet').value;
+    if (meet === "none") {
         document.getElementById("err-meet").style.display = "block";
         isValid = false;
     }
+    
 
 
     // Return isValid flag
@@ -60,21 +68,27 @@ function clearErrors() {
 
 
 // toggle the email checkbox
-const emailCheckbox = document.getElementById('mail');
+let emailCheckbox = document.getElementById('mail');
 emailCheckbox.addEventListener('change', function() {
     if (this.checked) {
+        // emailCheckbox.value = "Yes";
+        // console.log(emailCheckbox.value);
         // Add any other actions to perform when toggle is ON
         document.getElementById("pick-email-format").style.display = "block";
         console.log('Toggle is ON');
+        
+        
     } else {
+        // emailCheckbox.value = "No";
+        // console.log(emailCheckbox.value);
         // Add any other actions to perform when toggle is OFF
         document.getElementById("pick-email-format").style.display = "none";
         console.log('Toggle is OFF');
     }
 });
 // toggle the "Other (please specify)"
-const size = document.getElementById('meet');
-size.addEventListener('change', function() {
+const meet = document.getElementById('meet');
+meet.addEventListener('change', function() {
     if (this.value === "other") {
         document.getElementById("other-input").style.display = "block";
     } else {

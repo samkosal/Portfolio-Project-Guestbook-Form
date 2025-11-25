@@ -80,13 +80,15 @@
             </fieldset>
             <!-- checkbox, radio button-->
             <section>
-                
-                <label for="mail">
-                    <input type="checkbox" id="mail" name="mailing[]"
-                        value="mail">Please add me to your mailing list
+                <!-- if unchecked, use value = "No" -->
+                <label for="mail" id = "mail2">
+                    <input type="checkbox" id="mail" name="mailing"
+                        value="yes">Please add me to your mailing list
                 </label>
                 <br>
-                <label id = "pick-email-format"> Choose an email format:
+
+                <span id="err-pick-email-format" class="error"> Email Format cannot be empty!</span>
+                <label id = "pick-email-format"> Choose an Email Format:
                     <label for="HTML">
                         <input type="radio" id="HTML" name="method"
                             value="HTML">HTML

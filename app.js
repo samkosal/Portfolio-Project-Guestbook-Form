@@ -180,6 +180,14 @@ app.post('/submit-order', async(req, res) => {
         const order = req.body;
 
 
+        //check if email format is checked or not
+        if (typeof order.method === "undefined") {
+            order.method = "";
+        }
+        //check if user wants mailing list
+        if (typeof order.mailing === "undefined") {
+            order.mailing = "No";
+        }
         // Convert the toppings array into a comma-separated string
         // HTML checkboxes submit as an array, but MySQL stores as TEXT
         order.toppings = Array.isArray(order.toppings) ? 
